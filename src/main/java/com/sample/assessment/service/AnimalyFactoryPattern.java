@@ -28,10 +28,11 @@ public class AnimalyFactoryPattern {
 			put("fish", new Fish());
 			
 			put("shark", new Shark());
-			put("clownFish", new Clownfish());
+			put("clownfish", new Clownfish());
 			
 			put("dolphin", new Dolphin());
 			put("butterfly", new Butterfly());
+			put("catterPillar", new CatterPillar());
 
 		}
 	};

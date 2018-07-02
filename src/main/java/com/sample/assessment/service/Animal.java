@@ -28,6 +28,7 @@ public abstract class Animal implements IGender {
     protected static final String MAKE_JOKES = " make jokes";
     protected static final String THEY_ARE_GOOD_SWIMMERS = " Says They are Good Swimmers ";
     protected static final String I_CANNOT_MAKE_SOUND = " does not make a sound ";
+    protected static final String I_CAN_CRAWL = " Says  can walk (crawl) ";
 	
 	public abstract void fly();
 
