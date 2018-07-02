@@ -1,5 +1,7 @@
 package com.sample.assessment.service;
 
+import ch.qos.logback.core.net.SyslogOutputStream;
+
 /**
  * 
  * @author Ramachandra
@@ -7,11 +9,22 @@ package com.sample.assessment.service;
  */
 public class Bird extends Animal {
 	public void fly() {
-		System.out.println("I am flying");
+		logMessage("I am flying");
 	}
 
 	public void sing() {
-		System.out.println("I am singing");
+		logMessage("I am singing");
+
+	}
+
+	@Override
+	public void walk() {
+		logMessage("I am walking");
+	}
+
+	@Override
+	public void logMessage(String statement) {
+		System.out.println(this.getClass().getSimpleName() + " Says " + statement);
 
 	}
 }
