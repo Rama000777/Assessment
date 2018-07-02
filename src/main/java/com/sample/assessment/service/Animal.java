@@ -20,6 +20,8 @@ public abstract class Animal implements IGender {
     protected static final String ROOSTER_SAYS_COOK_A_DOODLE = " Says Cock-a-doodle-doo";
     protected static final String I_AM_SAYING_WOOF = "Says Woof, woof";
     protected static final String I_AM_SAYING_MEOW = "Says Meow";
+    protected static final String I_CANNOT_WALK = " Says I Cannot Walk";
+    protected static final String I_CANNOT_SING = " Says I Cannot Sing";
 	
 	public abstract void fly();
 
