@@ -29,6 +29,8 @@ public class AnimalyFactoryPattern {
 			
 			put("shark", new Shark());
 			put("clownFish", new Clownfish());
+			
+			put("dolphin", new Dolphin());
 
 		}
 	};

@@ -1,8 +1,5 @@
 package com.sample.assessment;
 
-import static org.junit.Assert.assertFalse;
-import static org.junit.Assert.assertTrue;
-
 import java.io.IOException;
 
 import org.junit.Before;
