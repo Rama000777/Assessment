@@ -3,6 +3,8 @@
  */
 package com.sample.assessment.service;
 
+import java.util.Locale;
+
 public class Rooster extends Chicken {
 
 	@Override
@@ -13,8 +15,8 @@ public class Rooster extends Chicken {
 
 	@Override
 	public boolean sing() {
-		logMessage(ROOSTER_SAYS_COOK_A_DOODLE);
-		return true;
+		logMessage(" Says "+ getLocaleRoosterSound());
+        return true;
 	}
 
 	@Override
@@ -43,5 +45,9 @@ public class Rooster extends Chicken {
 	public boolean isYoung() {
 		return false;
 	}
-
+	
+	public String getLocaleRoosterSound() {
+        Locale locale = Locale.getDefault();
+        return RoosterSoundsByLocale.getRoosterSound(locale.getDisplayLanguage());
+    }
 }
