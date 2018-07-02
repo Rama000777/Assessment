@@ -12,23 +12,27 @@ package com.sample.assessment.service;
 public class Fish extends Animal {
 
     @Override
-    public void fly() {
+    public boolean fly() {
         logMessage(I_CANNOT_FLY);
+        return false;
     }
 
     @Override
-    public void sing() {
+    public boolean sing() {
         logMessage(I_CANNOT_SING);
+        return false;
     }
 
     @Override
-    public void swim() {
+    public boolean swim() {
         logMessage(I_AM_SWIMMING);
+        return true;
     }
 
     @Override
-    public void walk() {
+    public boolean walk() {
         logMessage(I_CANNOT_WALK);
+        return false;
     }
 
     @Override

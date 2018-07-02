@@ -1,5 +1,8 @@
 package com.sample.assessment;
 
+import static org.junit.Assert.assertFalse;
+import static org.junit.Assert.assertTrue;
+
 import java.io.IOException;
 
 import org.junit.Before;
@@ -18,9 +21,9 @@ public class Question9Test {
 
 	@Test
 	public void testCaterPillar() {
-		catterPillar.sing();
-		catterPillar.swim();
-		catterPillar.walk();
-		catterPillar.fly();
+		assertFalse("The catterPillar is expected not to sing", catterPillar.sing());
+        assertFalse("The catterPillar is expected not to swim", catterPillar.swim());
+        assertTrue("The catterPillar is expected to walk", catterPillar.walk());
+        assertFalse("The catterPillar is expected not to fly", catterPillar.fly());
 	}
 }

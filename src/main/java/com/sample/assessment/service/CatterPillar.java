@@ -12,23 +12,27 @@ package com.sample.assessment.service;
 public class CatterPillar extends Butterfly {
 
     @Override
-    public void fly() {
+    public boolean fly() {
         logMessage(I_CANNOT_FLY);
+        return false;
     }
 
     @Override
-    public void sing() {
+    public boolean sing() {
         logMessage(I_CANNOT_MAKE_SOUND);
+        return false;
     }
 
     @Override
-    public void swim() {
+    public boolean swim() {
         logMessage(I_CANNOT_SWIM);
+        return false;
     }
 
     @Override
-    public void walk() {
+    public boolean walk() {
         logMessage(I_CAN_CRAWL);
+        return true;
     }
 
     @Override

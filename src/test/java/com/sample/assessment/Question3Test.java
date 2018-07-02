@@ -1,5 +1,6 @@
 package com.sample.assessment;
 
+import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;
 
 import java.io.IOException;
@@ -21,10 +22,10 @@ public class Question3Test {
 
     @Test
     public void testRooster() {
-    	rooster.sing();
-    	rooster.swim();
-    	rooster.walk();
-    	rooster.fly();
+    	assertTrue("The rooster is expected to sing", rooster.sing());
+        assertFalse("The rooster is expected swim", rooster.swim());
+        assertTrue("The rooster is expected to walk", rooster.walk());
+        assertFalse("The rooster is expected not to fly", rooster.fly());
     }
 
     @Test

@@ -77,8 +77,8 @@ public class Parrot extends Bird {
     }
 
     @Override
-    public void sing() {
-        Animal animal = null;
+    public boolean sing() {
+    	Animal animal = null;
         if (isLivingWithDogs) {
             animal = AnimalyFactoryPattern.getAnimal(Dog.class.getSimpleName());
         } else if (isLivingWithCats) {
@@ -89,10 +89,11 @@ public class Parrot extends Bird {
             animal = AnimalyFactoryPattern.getAnimal(Duck.class.getSimpleName());
         } else if (isLivingNearPhone) {
             System.out.println(this.getClass().getSimpleName() + " Says Tring Tring");
+            return true;
         }
         if (animal == null) {
-        	return;
+            return super.sing();
         }
-        animal.sing();
+        return animal.sing();
     }
 }

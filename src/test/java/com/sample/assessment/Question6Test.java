@@ -1,5 +1,8 @@
 package com.sample.assessment;
 
+import static org.junit.Assert.assertFalse;
+import static org.junit.Assert.assertTrue;
+
 import java.io.IOException;
 
 import org.junit.Before;
@@ -21,10 +24,10 @@ public class Question6Test {
 
     @Test
     public void testShark() {
-    	shark.sing();
-    	shark.swim();
-    	shark.walk();
-    	shark.fly();
+    	assertFalse("The shark is expected not to sing", shark.sing());
+        assertTrue("The shark is expected swim", shark.swim());
+        assertFalse("The shark is expected not to walk", shark.walk());
+        assertFalse("The shark is expected not to fly", shark.fly());
     }
 
     @Test
@@ -34,10 +37,10 @@ public class Question6Test {
     
     @Test
     public void testClownFish() {
-    	clownFish.sing();
-    	clownFish.swim();
-    	clownFish.walk();
-    	clownFish.fly();
+    	 assertFalse("The clownFish is expected not to sing", clownFish.sing());
+         assertTrue("The clownFish is expected swim", clownFish.swim());
+         assertFalse("The clownFish is expected not to walk", clownFish.walk());
+         assertFalse("The clownFish is expected not to fly", clownFish.fly());
     }
 
     @Test

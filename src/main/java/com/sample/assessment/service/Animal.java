@@ -30,13 +30,13 @@ public abstract class Animal implements IGender {
     protected static final String I_CANNOT_MAKE_SOUND = " does not make a sound ";
     protected static final String I_CAN_CRAWL = " Says  can walk (crawl) ";
 	
-	public abstract void fly();
+	public abstract boolean fly();
 
-	public abstract void walk();
+	public abstract boolean walk();
 	
-	public abstract void sing();
+	public abstract boolean sing();
 	
-	public abstract void swim();
+	public abstract boolean swim();
 
 	public abstract void logMessage(String statement);
 	

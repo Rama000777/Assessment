@@ -1,5 +1,8 @@
 package com.sample.assessment;
 
+import static org.junit.Assert.assertFalse;
+import static org.junit.Assert.assertTrue;
+
 import java.io.IOException;
 
 import org.junit.Before;
@@ -18,9 +21,9 @@ public class Question8Test {
 
 	@Test
 	public void testButterFly() {
-		butterfly.sing();
-		butterfly.swim();
-		butterfly.walk();
-		butterfly.fly();
+		assertFalse("The butterfly is expected not to sing", butterfly.sing());
+        assertFalse("The butterfly is expected not to swim", butterfly.swim());
+        assertFalse("The butterfly is expected not to walk", butterfly.walk());
+        assertTrue("The butterfly is expected to fly", butterfly.fly());
 	}
 }

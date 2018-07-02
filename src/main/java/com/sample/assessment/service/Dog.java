@@ -10,29 +10,33 @@ package com.sample.assessment.service;
  */
 
 public class Dog extends Animal {
+   
+    @Override
+    public boolean fly() {
+        logMessage(I_CANNOT_FLY);
+        return false;
+    }
 
-	@Override
-	public void fly() {
-		logMessage(I_CANNOT_FLY);
-	}
+    @Override
+    public boolean sing() {
+        logMessage(I_AM_SAYING_WOOF);
+        return true;
+    }
 
-	@Override
-	public void sing() {
-		logMessage(I_AM_SAYING_WOOF);
-	}
+    @Override
+    public boolean swim() {
+        logMessage(I_AM_SWIMMING);
+        return true;
+    }
 
-	@Override
-	public void swim() {
-		logMessage(I_AM_SWIMMING);
-	}
+    @Override
+    public boolean walk() {
+        logMessage(I_AM_WALKING);
+        return true;
+    }
 
-	@Override
-	public void walk() {
-		logMessage(I_AM_WALKING);
-	}
-
-	@Override
-	public void logMessage(String statement) {
-		System.out.println(this.getClass().getSimpleName() + statement);
-	}
+    @Override
+    public void logMessage(String statement) {
+        System.out.println(this.getClass().getSimpleName() + statement);
+    }
 }

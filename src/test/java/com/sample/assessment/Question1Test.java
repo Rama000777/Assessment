@@ -1,5 +1,7 @@
 package com.sample.assessment;
 
+import static org.junit.Assert.assertTrue;
+
 import java.io.IOException;
 
 import org.junit.Before;
@@ -25,17 +27,17 @@ public class Question1Test {
 
     @Test
     public void testBirdFly() {
-    	bird.fly();
+        assertTrue("The Bird is expected to fly", bird.fly());
     }
 
     @Test
     public void testBirdSing() {
-        bird.sing();
+        assertTrue("The Bird is expected to Sing", bird.sing());
     }
 
     @Test
     public void testBirdWalk() {
-        bird.walk();
+        assertTrue("The Bird is expected to Walk", bird.walk());
     }
 
 }

@@ -10,25 +10,29 @@ package com.sample.assessment.service;
  */
 
 public class Chicken extends Bird {    
-
+    
     @Override
-    public void fly() {
+    public boolean fly() {
         logMessage(MY_WINGS_CLAPPED);
+        return false;
     }
 
     @Override
-    public void sing() {
+    public boolean sing() {
         logMessage(I_AM_SAYING_CLUCK_CLUCK);
+        return true;
     }
 
     @Override
-    public void swim() {
+    public boolean swim() {
         logMessage(I_CANNOT_SWIM);
+        return false;
     }
 
     @Override
-    public void walk() {
+    public boolean walk() {
         logMessage(I_AM_WALKING);
+        return true;
     }
 
     @Override

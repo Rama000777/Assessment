@@ -1,5 +1,8 @@
 package com.sample.assessment;
 
+import static org.junit.Assert.assertFalse;
+import static org.junit.Assert.assertTrue;
+
 import java.io.IOException;
 
 import org.junit.Before;
@@ -28,34 +31,34 @@ public class Question4Test {
 
     @Test
     public void testParrotLivingWithDogs() {
-        parrotLivingWithDogs.sing();
+    	assertTrue("The parrot is expected to sing", parrotLivingWithDogs.sing());
     }
 
     @Test
     public void testParrotLivingWithCats() {
-    	parrotLivingWithCats.sing();
+    	assertTrue("The parrot is expected to sing", parrotLivingWithCats.sing());
     }
 
     @Test
     public void testParrotLivingNearRooster() {
-    	parrotLivingNearRooster.sing();
+    	assertTrue("The parrot is expected to sing", parrotLivingNearRooster.sing());
     }
 
     @Test
     public void testParrotLivingNearDuck() {
-    	parrotLivingNearDuck.sing();
+    	assertTrue("The parrot is expected to sing", parrotLivingNearDuck.sing());
     }
 
     @Test
     public void testParrotLivingNearPhone() {
-    	parrotLivingNearPhone.sing();
+    	assertTrue("The parrot is expected to sing", parrotLivingNearPhone.sing());
     }
     
     @Test
     public void testParrot() {
-    	parrot.sing();
-    	parrot.swim();
-    	parrot.walk();
-    	parrot.fly();
+    	assertTrue("The parrot is expected to sing", parrot.sing());
+        assertFalse("The parrot is expected not swim", parrot.swim());
+        assertTrue("The parrot is expected to walk", parrot.walk());
+        assertTrue("The parrot is expected to fly", parrot.fly());
     }
 }

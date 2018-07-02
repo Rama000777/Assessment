@@ -1,5 +1,5 @@
 /**
- * Dolphin.java
+ * Frog.java
  */
 package com.sample.assessment.service;
 
@@ -8,8 +8,7 @@ package com.sample.assessment.service;
  * @author Ramachandra
  *
  */
-
-public class Dolphin extends Animal {
+public class Frog extends Animal {
 
     @Override
     public boolean fly() {
@@ -19,13 +18,13 @@ public class Dolphin extends Animal {
 
     @Override
     public boolean sing() {
-        logMessage(I_CANNOT_SING);
-        return false;
+        logMessage(I_AM_SINGING);
+        return true;
     }
 
     @Override
     public boolean swim() {
-        logMessage(THEY_ARE_GOOD_SWIMMERS);
+        logMessage(I_AM_SWIMMING);
         return true;
     }
 
@@ -39,5 +38,7 @@ public class Dolphin extends Animal {
     public void logMessage(String statement) {
         System.out.println(this.getClass().getSimpleName() + statement);
     }
+
+   
 
 }

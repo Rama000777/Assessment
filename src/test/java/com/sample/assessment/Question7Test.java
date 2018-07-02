@@ -1,5 +1,8 @@
 package com.sample.assessment;
 
+import static org.junit.Assert.assertFalse;
+import static org.junit.Assert.assertTrue;
+
 import java.io.IOException;
 
 import org.junit.Before;
@@ -18,9 +21,9 @@ public class Question7Test {
 
     @Test
     public void testDolphin() {
-    	dolphin.sing();
-    	dolphin.swim();
-    	dolphin.walk();
-    	dolphin.fly();
+    	assertFalse("The dolphin is expected not to sing", dolphin.sing());
+        assertTrue("The dolphin is expected swim", dolphin.swim());
+        assertFalse("The dolphin is expected not to walk", dolphin.walk());
+        assertFalse("The dolphin is expected not to fly", dolphin.fly());
     }
 }
