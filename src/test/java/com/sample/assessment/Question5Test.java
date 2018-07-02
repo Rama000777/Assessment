@@ -17,7 +17,7 @@ public class Question5Test {
     }
 
     @Test
-    public void testRooster() {
+    public void testFish() {
     	fish.sing();
     	fish.swim();
     	fish.walk();
